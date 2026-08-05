@@ -12,3 +12,11 @@
 ## 技术栈
 
 Vite + React + TypeScript，Manifest V3 浏览器扩展（Chrome / Edge）。
+
+
+## 开发进度
+
+- [x] 设计文档、实现计划（已同步 GitHub）
+- [x] Phase 0 项目骨架 + Phase 1 数据层与基础工具（代码已写入）
+- [ ] 安装依赖并运行测试（npm install、npm run test:run、npm run build）——待环境就绪后执行
+- [ ] Phase 2 及以后各阶段
