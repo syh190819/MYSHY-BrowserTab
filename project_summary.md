@@ -22,7 +22,7 @@
 
 ## 三、仓库与远程
 
-- 本地路径：`D:\HuaweiMoveData\Users\11473\Documents\Repository\99_工作日志\vibe-coding\浏览器工作台`
+- 当前机器克隆路径：`D:\HuaweiMoveData\Users\11473\Documents\Repository\99_工作日志\vibe-coding\浏览器工作台`（**其他机器以实际克隆位置为准**）
 - GitHub：https://github.com/syh190819/MYSHY-BrowserTab （**公开**，默认分支 `main`）
 - 推送：走 HTTPS（Git Credential Manager）；SSH 密钥未绑定 GitHub。
 - git 用户：syh190819 / syh190819@gmail.com
@@ -82,10 +82,18 @@
 - 同类项目调研：已完成（详见设计文档第十二节），调整已落实到设置引擎、CSV 导出与计划新增任务
 - 下一步：**Phase 2 搜索与快捷跳转**
 
-## 七、本机环境与注意事项（Windows）
+## 七、环境与注意事项
+
+> 以下"本机"信息仅适用于 2026-08-05 开发时使用的这台电脑。**换机器 / 换克隆位置后，所有路径以实际克隆目录为准**，Node 版本、npm 缓存位置等也可能不同，不要照搬本机路径。
+
+### 本机（这台电脑）
 
 - Node v22.21.0、npm 10.9.4（无需再搭环境）
-- **C 盘空间紧张**：node_modules 在 D 盘项目内；npm 缓存指向 `D:\HuaweiMoveData\Users\11473\Documents\Repository\99_工作日志\vibe-coding\.npm-cache`；安装命令必须带 `--cache` 参数指向该目录
+- **C 盘空间紧张**：node_modules 在项目内（本项目位于 D 盘）；npm 缓存指向 `D:\HuaweiMoveData\Users\11473\Documents\Repository\99_工作日志\vibe-coding\.npm-cache`；在本机执行安装命令时必须带 `--cache` 指向该目录
+- 开发服务器日志：dev-server.log（已 gitignore）
+
+### 通用注意事项（所有机器）
+
 - 沙箱限制：
   - git 写操作、npm install/test/build、启动后台进程需申请授权（esbuild 子进程在沙箱内会 EPERM）
   - `apply_patch` 修改已有文件会失败（环境 bug），新建文件可用；改已有文件用 PowerShell `[System.IO.File]` 读写（UTF-8 无 BOM）
@@ -98,6 +106,7 @@
 - 核心逻辑先写测试（TDD）；无法运行测试时，明确标注"未验证"
 - 中文界面文案；代码标识符一律英文
 - 用户习惯：执行任务前先说"Let's goooo!"；用户问"懂我意思吗"时回答"懂你意思"
+- 路径类信息一律以**实际克隆位置**为准，本机路径只作参考（见第七节）
 
 ## 九、已知问题与风险
 
